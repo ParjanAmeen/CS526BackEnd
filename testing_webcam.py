@@ -25,14 +25,6 @@ def capture_save_and_send():
             # Release the camera
             cap.release()
 
-            # # Generate a timestamp for the image filename
-            # timestamp = time.strftime('%Y%m%d%H%M%S')
-            # local_filename = f"captured_images/{timestamp}.png"
-
-            # # Save the image locally
-            # cv2.imwrite(local_filename, frame)
-            # print(f"Image saved locally: {local_filename}")
-
             # Generate a random 5-digit lot ID
             lot_id = '12345'  # Replace with your generated lot ID
 
@@ -64,7 +56,6 @@ if __name__ == '__main__':
     # Start capturing, saving, and sending images
     capture_thread = Thread(target=capture_save_and_send)
     capture_thread.start()
-
-    # Keep the main thread running to allow the capture_thread to continue
+    
     while True:
         pass
