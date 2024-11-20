@@ -4,11 +4,12 @@ import os
 import requests
 from threading import Thread
 
+# Might have to import the pi camera library cuz this is if a webcam is connected to it
+
 def capture_save_and_send():
     while True:
         try:
             # Open the default camera
-            #(you may need to adjust the index based on the camera being used)
             cap = cv2.VideoCapture(0)
 
             # Check if the camera opened successfully
@@ -26,7 +27,7 @@ def capture_save_and_send():
             cap.release()
 
             # Generate a random 5-digit lot ID
-            lot_id = '12345'  # Replace with your generated lot ID
+            lot_id = '12345' 
 
             # Send the image as a POST request to the specified URL
             server_url = 'http://192.168.1.3:8000/upload'
@@ -37,7 +38,6 @@ def capture_save_and_send():
 
             response = requests.post(server_url, files=files, headers=headers)
 
-            # Check if the request was successful (status code 2xx)
             if not response.ok:
                 raise Exception(f"Error: Request failed with status code {response.status_code}.")
 
@@ -50,12 +50,9 @@ def capture_save_and_send():
         time.sleep(30)
 
 if __name__ == '__main__':
-    # Ensure the 'captured_images' directory exists
-    # os.makedirs('captured_images', exist_ok=True)
 
-    # Start capturing, saving, and sending images
     capture_thread = Thread(target=capture_save_and_send)
     capture_thread.start()
-    
+
     while True:
         pass
