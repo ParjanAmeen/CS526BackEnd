@@ -1,0 +1,22 @@
+[
+    {
+        "id": 11111,
+        "name": "Lot K",
+        "location": "Binghamton Univeristy"
+    },
+    {
+        "id": 23456,
+        "name": "Lot L",
+        "location": "Binghamton Univeristy"
+    },
+    {
+        "id": 12345,
+        "name": "OT Lot",
+        "location": "130 Murray St."
+    },
+    {
+        "id": 46533,
+        "name": "JFK Airport",
+        "location": "123 Okay St."
+    }
+]
