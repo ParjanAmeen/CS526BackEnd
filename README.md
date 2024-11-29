@@ -32,7 +32,11 @@ pip install picamera2
 pip install io
 ```
 
-•Next after positioning the pi camera at a parking lot you will want to take an initial image by running the following in a terminal “libcamera-still -o 12345.jpeg”
+•Next after positioning the pi camera at a parking lot you will want to take an initial image by running the following in a terminal:
+
+```sh
+libcamera-still -o 12345.jpeg”
+```
 
 •Next take that image and place it your backend repo directory on your laptop in upload_folder/12345. You will see a 12345.jpeg already in there as we pushed that code but the 12345 directory and the images would be created when running the server.py code. They need to be there initially for the next part to run. You only need to do this once
 
