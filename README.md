@@ -1,36 +1,21 @@
-## How-to-run:
+## SmartPark Backend
 
-1. Start by cloning the CS526BackEnd repo from GitHub.
-2. Next, cd into the CS526BackEnd repo.
+This repository is the backend portion of the SmartPark project. The frontend repository can be found [here](https://github.com/ParjanAmeen/SmartPark-FrontEnd). The system uses a Raspberry Pi 4 to take a picture every 30 seconds and sends it to a Flask server. The server analyzes the photo to check if a vehicle is occupying the designated parking spots. This data is stored in a JSON file and sent to the frontend, which displays the parking lot data via an app.
 
 ### Install Required Packages on Your Computer
 
-You will need to pip install a couple of things to be able to run the code. Below is a list of packages you will need to install:
+You will need to run the `computer-package-install.py` script to install the necessary packages. Below is the command to run the script:
 
 ```sh
-pip install cv2
-pip install numpy
-pip install cvzone
-pip install pickle
-pip install pandas
-pip install ultralytics
-pip install json
-pip install flask
-pip install os
+python computer-package-install.py
 ```
 
-
-•After that you will need to set up your raspberry pi and be able to ssh into it. You only need to put the testing_webcam.py on the pi itself. Also make sure the rp camera module is securely connected and you will have to enable raspberry pi in the pi’s setting. Below is the list of packages you will need to install on the pi
+•After that you will need to set up your raspberry pi and be able to ssh into it. You only need to put the camera.py and pi-package-install.py on the pi itself. Also make sure the rp camera module is securely connected and you will have to enable raspberry pi in the pi’s setting. You will need to run the `pi-package-install.py` script to install the necessary packages on the pi. Below is the command to run the script:
 
 ```sh
-pip install time
-pip install os
-pip install io
-pip install requests
-pip install threading
-pip install picamera2
-pip install io
+python pi-package-install.py
 ```
+
 
 •Next after positioning the pi camera at a parking lot you will want to take an initial image by running the following in a terminal:
 
@@ -48,4 +33,4 @@ libcamera-still -o 12345.jpeg”
 
 •Take that link and past it in the testing_webcam.py located on your pi
 
-•Now run testing_webcam.py. This will run forever as it keeps taking an image every 30 seconds and sends it to the flask server we have running
+•Now run camera.py. This will run forever as it keeps taking an image every 30 seconds and sends it to the flask server we have running
