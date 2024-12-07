@@ -1,6 +1,6 @@
 ## SmartPark Backend
 
-This repository is the backend portion of the SmartPark project. The frontend repository can be found [here](https://github.com/ParjanAmeen/SmartPark-FrontEnd). The system uses a Raspberry Pi 4 to take a picture every 30 seconds and sends it to a Flask server. The server analyzes the photo to check if a vehicle is occupying the designated parking spots. This data is stored in a JSON file and sent to the frontend, which displays the parking lot data via an app.
+This repository is the backend portion of the SmartPark project. The frontend repository can be found [here](https://github.com/ParjanAmeen/SmartPark-FrontEnd). The system uses a Raspberry Pi 4 to take a picture every 30 seconds and sends it to a Flask server. The server analyzes the photo using the YOLOv8 model to detect the designated parking spots and check if a vehicle is occupying them. This data is stored in a JSON file and sent to the frontend, which displays the parking lot data via an app.
 
 ### Install Required Packages on Your Computer
 
