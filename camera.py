@@ -33,7 +33,7 @@ def capture_save_and_send():
             lot_id = '12345' 
 
             # Send the image as a POST request to the specified URL
-            server_url = 'http://192.168.1.3:8000/upload'
+            server_url = 'ENTER THE URL PROVIDED TO YOU AFTER RUNNING server.py/upload'
             files = {'image': (f'{lot_id}.jpeg', image_data, 'image/jpeg')}
             headers = {'lotID': lot_id}
 
