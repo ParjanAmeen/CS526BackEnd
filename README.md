@@ -31,6 +31,6 @@ libcamera-still -o 12345.jpeg”
 
 •You do not run main.py your next step is to run server.py and retrieve the link that is produced in the terminal
 
-•Take that link and past it in the testing_webcam.py located on your pi
+•Take that link and past it in the camera.py file located on your pi
 
 •Now run camera.py. This will run forever as it keeps taking an image every 30 seconds and sends it to the flask server we have running
